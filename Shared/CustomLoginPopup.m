@@ -39,6 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:activityIndicator];
+    activityIndicator.center = self.view.center;
 }
 
 
