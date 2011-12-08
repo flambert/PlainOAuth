@@ -163,7 +163,7 @@
 - (void) load {
     self.oauth_token = [[NSUserDefaults standardUserDefaults] stringForKey:[NSString stringWithFormat:@"%@oauth_token", self.save_prefix]];
 	self.oauth_token_secret = [[NSUserDefaults standardUserDefaults] stringForKey:[NSString stringWithFormat:@"%@oauth_token_secret", self.save_prefix]];
-	self.oauth_token_authorized = [[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"%@oauth_token_authorized", self.save_prefix]];
+	self.oauth_token_authorized = (BOOL)[[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"%@oauth_token_authorized", self.save_prefix]];
 }
 
 - (void) save {
