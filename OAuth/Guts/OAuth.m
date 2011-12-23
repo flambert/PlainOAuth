@@ -168,6 +168,7 @@
     [[NSUserDefaults standardUserDefaults] setObject:self.oauth_token forKey:[NSString stringWithFormat:@"%@oauth_token", self.save_prefix]];
 	[[NSUserDefaults standardUserDefaults] setObject:self.oauth_token_secret forKey:[NSString stringWithFormat:@"%@oauth_token_secret", self.save_prefix]];
     [[NSUserDefaults standardUserDefaults] setInteger:self.oauth_token_authorized forKey:[NSString stringWithFormat:@"%@oauth_token_authorized", self.save_prefix]];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 #pragma mark -
