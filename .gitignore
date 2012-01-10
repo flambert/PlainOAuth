@@ -20,3 +20,5 @@ profile
 OAuthConsumerCredentials.h
 UserInterfaceState.*
 xcdebugger
+
+*.xcuserdatad
