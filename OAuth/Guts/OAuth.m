@@ -195,7 +195,9 @@
 	
 	// Include all the OAuth base components into signature base string, no matter what else is going on.
 	for (NSString *part in [self oauth_base_components]) {
-		[parts setObject:[self valueForKey:part] forKey:part];
+        id object = [self valueForKey:part];
+        if (object == nil) object = @"";
+		[parts setObject:object forKey:part];
 	}
 	
 	if (params) {		
